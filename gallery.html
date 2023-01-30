@@ -76,6 +76,7 @@ img {
   background-color:#ffffff;
   padding: 3px;
   box-shadow: 4px 4px 15px -5px rgb(93, 93, 93);
+  margin-bottom: 2%;
 }
 p1{
   text-align: center;
@@ -94,6 +95,38 @@ p5{
     color: #000000;
 }
 
+.lightbox {
+	/* Hidden lightbox image */
+	display: none;
+	position: fixed;
+	z-index: 999;
+	width: 100%;
+	height: 100%;
+	text-align: center;
+	top: 0;
+	left: 0;
+	background: rgba(0, 0, 0, 0.532);
+}
+:target {
+		/* Show the lightbox */
+		display: block;
+	}
+img {
+		max-width: 100%;
+		max-height: 100%;
+	}
+.close {
+	position: absolute;
+	top: 20px;
+	right: 20px;
+	color: rgb(0, 0, 0);
+	text-decoration: none;
+}
+
+.thumbnail {
+	max-width: 180px;
+}
+
 </style>
 </head>
 <body>
@@ -109,35 +142,149 @@ p5{
     </div>
   </div>
   <div class="container">
-    <ul class="grid-wrapper" style="--auto-grid-min-size: 15rem;">
-      <li><img src="files/Gallery/sture1.png" class="img-fluid rounded" style="max-width: 100%;"></li>
-      <li><img src="files/Gallery/49.21.png" class="img-fluid rounded"style="max-width: 100%;"></li>
-      <li><img src="files/Gallery/49.38.png" class="img-fluid rounded"style="max-width: 100%;"></li>
-      <li><img src="files/Gallery/49.44.png" class="img-fluid rounded"style="max-width: 100%;"></li>
-      <li><img src="files/Gallery/49.50.png" class="img-fluid rounded"style="max-width: 100%;"></li>
-      <li><img src="files/Gallery/50.08.png" class="img-fluid rounded"style="max-width: 100%;"></li>
-      <li><img src="files/Gallery/sture2.png" class="img-fluid rounded"style="max-width: 100%;"></li>
-      <li><img src="files/Gallery/50.14.png" class="img-fluid rounded"style="max-width: 100%;"></li>
-      <li><img src="files/Gallery/50.19.png" class="img-fluid rounded"style="max-width: 100%;"></li>
-      <li><img src="files/Gallery/stuck.png" class="img-fluid rounded"style="max-width: 100%;"></li>	
-      <li><img src="files/Gallery/50.24.png" class="img-fluid rounded"style="max-width: 100%;"></li>
-      <li><img src="files/Gallery/50.29.png" class="img-fluid rounded"style="max-width: 100%;"></li>
-      <li><img src="files/Gallery/1.jpg" class="img-fluid rounded"style="max-width: 100%;"></li>	
-      <li><img src="files/Gallery/2.jpg" class="img-fluid rounded"style="max-width: 100%;"></li>	
-      <li><img src="files/Gallery/4.jpg" class="img-fluid rounded"style="max-width: 100%;"></li>		
-      <li><img src="files/Gallery/y1.jpg" class="img-fluid rounded"style="max-width: 100%;"></li>
-      <li><img src="files/Gallery/y11.jpg" class="img-fluid rounded"style="max-width: 100%;"></li>	
-      <li><img src="files/Gallery/pic2.JPG" class="img-fluid rounded"style="max-width: 100%;"></li>	
-      <li><img src="files/Gallery/pic5.JPG" class="img-fluid rounded"style="max-width: 100%;"></li>
-      <li><img src="files/Gallery/pic6.JPG" class="img-fluid rounded"style="max-width: 100%;"></li>			
-      <li><img src="files/Gallery/y2.jpg" class="img-fluid rounded"style="max-width: 100%;"></li>	
-      <li><img src="files/Gallery/y3.jpg" class="img-fluid rounded"style="max-width: 100%;"></li>	
-      <li><img src="files/Gallery/y4.jpg" class="img-fluid rounded"style="max-width: 100%;"></li>	
-      <li><img src="files/Gallery/y6.jpg" class="img-fluid rounded"style="max-width: 100%;"></li>	
-      <li><img src="files/Gallery/y7.jpg" class="img-fluid rounded"style="max-width: 100%;"></li>	
-      <li><img src="files/Gallery/y8.jpg" class="img-fluid rounded"style="max-width: 100%;"></li>	
-      <li><img src="files/Gallery/y9.jpg" class="img-fluid rounded"style="max-width: 100%;"></li>	
-      <li><img src="files/Gallery/y10.jpg" class="img-fluid rounded"style="max-width: 100%;"></li>	
+    <ul class="grid-wrapper" style="--auto-grid-min-size: 12rem;">
+      <a href="#img1"><li><img src="files/Gallery/sture1.png" class="img-fluid rounded"></li></a>
+      <a href="#1"><li><img src="files/Gallery/49.21.png" class="img-fluid rounded"></li></a>
+      <a href="#2"><li><img src="files/Gallery/49.38.png" class="img-fluid rounded"></li></a>
+      <a href="#3"><li><img src="files/Gallery/49.44.png" class="img-fluid rounded"></li></a>
+      <a href="#4"><li><img src="files/Gallery/49.50.png" class="img-fluid rounded"></li></a>
+      <a href="#5"><li><img src="files/Gallery/50.08.png" class="img-fluid rounded"></li></a>
+      <a href="#6"><li><img src="files/Gallery/sture2.png" class="img-fluid rounded"></li></a>
+      <a href="#7"><li><img src="files/Gallery/50.14.png" class="img-fluid rounded"></li></a>
+      <a href="#8"><li><img src="files/Gallery/50.19.png" class="img-fluid rounded"></li></a>
+      <a href="#9"><li><img src="files/Gallery/stuck.png" class="img-fluid rounded"></li></a>	
+      <a href="#10"><li><img src="files/Gallery/50.24.png" class="img-fluid rounded"></li></a>
+      <a href="#11"><li><img src="files/Gallery/50.29.png" class="img-fluid rounded"></li></a>
+      <a href="#12"><li><img src="files/Gallery/1.jpg" class="img-fluid rounded"></li></a>	
+      <a href="#13"><li><img src="files/Gallery/2.jpg" class="img-fluid rounded"></li></a>	
+      <a href="#14"><li><img src="files/Gallery/4.jpg" class="img-fluid rounded"></li></a>		
+      <a href="#15"><li><img src="files/Gallery/y1.jpg" class="img-fluid rounded"></li></a>
+      <a href="#16"><li><img src="files/Gallery/y11.jpg" class="img-fluid rounded"></li></a>	
+      <a href="#17"><li><img src="files/Gallery/pic2.JPG" class="img-fluid rounded"></li></a>	
+      <a href="#18"><li><img src="files/Gallery/pic5.JPG" class="img-fluid rounded"></li></a>
+      <a href="#19"><li><img src="files/Gallery/pic6.JPG" class="img-fluid rounded"></li></a>			
+      <a href="#20"><li><img src="files/Gallery/y2.jpg" class="img-fluid rounded"></li></a>	
+      <a href="#21"><li><img src="files/Gallery/y3.jpg" class="img-fluid rounded"></li></a>	
+      <a href="#22"><li><img src="files/Gallery/y4.jpg" class="img-fluid rounded"></li></a>	
+      <a href="#23"><li><img src="files/Gallery/y6.jpg" class="img-fluid rounded"></li></a>	
+      <a href="#24"><li><img src="files/Gallery/y7.jpg" class="img-fluid rounded"></li></a>	
+      <a href="#25"><li><img src="files/Gallery/y8.jpg" class="img-fluid rounded"></li></a>	
+      <a href="#26"><li><img src="files/Gallery/y9.jpg" class="img-fluid rounded"></li></a>	
+      <a href="#27"><li><img src="files/Gallery/y10.jpg" class="img-fluid rounded"></li></a>	
   </div>
+  <div>
+    <div class="lightbox" id="img1">
+      <a href="#" class="close" style="color: #000000; font-size: 5em;" saria-label="close image">&times;</a>
+      <img src="files/Gallery/sture1.png" loading="lazy">
+    </div>
+    <div class="lightbox" id="1">
+      <a href="#" class="close" style="color: #000000; font-size: 5em;" saria-label="close image">&times;</a>
+      <img src="files/Gallery/49.21.png" loading="lazy">
+    </div>
+    <div class="lightbox" id="2">
+      <a href="#" class="close" style="color: #000000; font-size: 5em;" saria-label="close image">&times;</a>
+      <img src="files/Gallery/49.38.png" loading="lazy">
+    </div>
+    <div class="lightbox" id="3">
+      <a href="#" class="close" style="color: #000000; font-size: 5em;" saria-label="close image">&times;</a>
+      <img src="files/Gallery/49.44.png" loading="lazy">
+    </div>
+    <div class="lightbox" id="4">
+      <a href="#" class="close" style="color: #000000; font-size: 5em;" saria-label="close image">&times;</a>
+      <img src="files/Gallery/49.50.png" loading="lazy">
+    </div>
+    <div class="lightbox" id="5">
+      <a href="#" class="close" style="color: #000000; font-size: 5em;" saria-label="close image">&times;</a>
+      <img src="files/Gallery/50.08.png" loading="lazy">
+    </div>
+    <div class="lightbox" id="6">
+      <a href="#" class="close" style="color: #000000; font-size: 5em;" saria-label="close image">&times;</a>
+      <img src="files/Gallery/sture2.png" loading="lazy">
+    </div>
+    <div class="lightbox" id="7">
+      <a href="#" class="close" style="color: #000000; font-size: 5em;" saria-label="close image">&times;</a>
+      <img src="files/Gallery/50.14.png" loading="lazy">
+    </div>
+    <div class="lightbox" id="8">
+      <a href="#" class="close" style="color: #000000; font-size: 5em;" saria-label="close image">&times;</a>
+      <img src="files/Gallery/50.19.png" loading="lazy">
+    </div>
+    <div class="lightbox" id="9">
+      <a href="#" class="close" style="color: #000000; font-size: 5em;" saria-label="close image">&times;</a>
+      <img src="files/Gallery/stuck.png" loading="lazy">
+    </div>
+    <div class="lightbox" id="10">
+      <a href="#" class="close" style="color: #000000; font-size: 5em;" saria-label="close image">&times;</a>
+      <img src="files/Gallery/50.24.png" loading="lazy">
+    </div>
+    <div class="lightbox" id="11">
+      <a href="#" class="close" style="color: #000000; font-size: 5em;" saria-label="close image">&times;</a>
+      <img src="files/Gallery/50.29.png" loading="lazy">
+    </div>
+    <div class="lightbox" id="12">
+      <a href="#" class="close" style="color: #000000; font-size: 5em;" saria-label="close image">&times;</a>
+      <img src="files/Gallery/1.jpg" loading="lazy">
+    </div>
+    <div class="lightbox" id="13">
+      <a href="#" class="close" style="color: #000000; font-size: 5em;" saria-label="close image">&times;</a>
+      <img src="files/Gallery/2.jpg" loading="lazy">
+    </div>
+    <div class="lightbox" id="14">
+      <a href="#" class="close" style="color: #000000; font-size: 5em;" saria-label="close image">&times;</a>
+      <img src="files/Gallery/4.jpg" loading="lazy">
+    </div>
+    <div class="lightbox" id="15">
+      <a href="#" class="close" style="color: #000000; font-size: 5em;" saria-label="close image">&times;</a>
+      <img src="files/Gallery/y1.jpg" loading="lazy">
+    </div>
+    <div class="lightbox" id="16">
+      <a href="#" class="close" style="color: #000000; font-size: 5em;" saria-label="close image">&times;</a>
+      <img src="files/Gallery/y11.jpg" loading="lazy">
+    </div>
+    <div class="lightbox" id="17">
+      <a href="#" class="close" style="color: #000000; font-size: 5em;" saria-label="close image">&times;</a>
+      <img src="files/Gallery/pic2.JPG" loading="lazy">
+    </div>
+    <div class="lightbox" id="18">
+      <a href="#" class="close" style="color: #000000; font-size: 5em;" saria-label="close image">&times;</a>
+      <img src="files/Gallery/pic5.JPG" loading="lazy">
+    </div>
+    <div class="lightbox" id="19">
+      <a href="#" class="close" style="color: #000000; font-size: 5em;" saria-label="close image">&times;</a>
+      <img src="files/Gallery/pic6.JPG" loading="lazy">
+    </div>
+    <div class="lightbox" id="20">
+      <a href="#" class="close" style="color: #000000; font-size: 5em;" saria-label="close image">&times;</a>
+      <img src="files/Gallery/y2.jpg" loading="lazy">
+    </div>
+    <div class="lightbox" id="21">
+      <a href="#" class="close" style="color: #000000; font-size: 5em;" saria-label="close image">&times;</a>
+      <img src="files/Gallery/y3.jpg" loading="lazy">
+    </div>
+    <div class="lightbox" id="22">
+      <a href="#" class="close" style="color: #000000; font-size: 5em;" saria-label="close image">&times;</a>
+      <img src="files/Gallery/y4.jpg" loading="lazy">
+    </div>
+    <div class="lightbox" id="23">
+      <a href="#" class="close" style="color: #000000; font-size: 5em;" saria-label="close image">&times;</a>
+      <img src="files/Gallery/y6.jpg" loading="lazy">
+    </div>
+    <div class="lightbox" id="24">
+      <a href="#" class="close" style="color: #000000; font-size: 5em;" saria-label="close image">&times;</a>
+      <img src="files/Gallery/y7.jpg" loading="lazy">
+    </div>
+    <div class="lightbox" id="25">
+      <a href="#" class="close" style="color: #000000; font-size: 5em;" saria-label="close image">&times;</a>
+      <img src="files/Gallery/y8.jpg" loading="lazy">
+    </div>
+    <div class="lightbox" id="26">
+      <a href="#" class="close" style="color: #000000; font-size: 5em;" saria-label="close image">&times;</a>
+      <img src="files/Gallery/y9.jpg" loading="lazy">
+    </div>
+    <div class="lightbox" id="27">
+      <a href="#" class="close" style="color: #000000; font-size: 5em;" saria-label="close image">&times;</a>
+      <img src="files/Gallery/y10.jpg" loading="lazy">
+    </div>
+  </div> 
 </body>
 </html>
