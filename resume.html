@@ -14,14 +14,70 @@
   text-align: center;
   font-size: 30px;
   align-items: center;
-  justify-content: center;
   vertical-align: middle;
 }
+html {
+  scroll-behavior: smooth;
+}
+
+nav {
+  position:fixed;
+  width: 300px;
+  text-align: center;
+  padding: 15px;
+  top: 0;
+  right: 0;
+  color: #F6DF44;
+  background-color: #0d15a6;
+  box-shadow: 0 2px 5px 1px rgba(0, 0, 0, 0.2);
+}
+
+nav .link {
+  padding: 5px;
+  color: white;
+}
+
+.section {
+  height: 100vh;
+  display: flex;
+  color: rgb(0, 0, 0);
+  font-size: 3em;
+  /*text-shadow: 0px 2px 0px #b2a98f, 0px 4px 3px rgba(0, 0, 0, 0.15),
+    0px 8px 1px rgba(0, 0, 0, 0.1);*/
+}
+
+.bg-red {
+  background: #ffffff;
+  padding: 1%;
+  height:auto;
+}
+
+.bg-blue {
+  background: #ffffff;
+  padding: 1%;
+  height:auto;
+  padding: 8%;
+}
+
+.bg-green {
+  background: rgb(255, 255, 255);
+  padding: 1%;
+  height:auto;
+  padding: 8%;
+}
+
+.bg-yellow {
+  background: #ffffff;
+  padding: 1%;
+  height:auto;
+  padding: 8%;
+}
+
 .backup1{
   position: absolute;
   color: #040fd9;
-  top: 5%;
-  width: 150px;
+  top: 0;
+  width: 400px;
   height: 50px;
   justify-content: center;
   align-items: center;
@@ -35,6 +91,7 @@ a:link {
     text-decoration:none;
     justify-content: center;
     align-items: center;
+    color: #F6DF44;
 }
 a:visited {
    color: #F6DF44;
@@ -54,20 +111,219 @@ body {
 	padding: 5px;
   margin-top: 70px;
 	background: #0d15a6;
-  align-items: center;
-  text-align: center;
-  justify-content: center;
-  vertical-align: middle;
 }
+p1{
+  text-align: center;
+    vertical-align: middle;
+    text-decoration:none;
+    justify-content: center;
+    align-items: center;
+    color: #F6DF44;
+}
+
+p2{
+  text-align: center;
+  color: #000000;
+  font-size: 20px;
+}
+p3{
+  text-align: center;
+  color: #000000;
+  font-size: 25px;
+  font-weight: bold;
+}
+p4{
+  text-align: center;
+  color: #000000;
+  font-size: 40px;
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    grid-gap: 1em;
+}
+
+hr.new4 {
+  border: 20px solid rgb(0, 0, 0);
+}
+
 </style>
 </head>
 <body>
   <div class ="header">
-    <div class="backup1">
+    <div class="backup1"">
       <a href="index.html">HOME</a>
+      <p1> | </p1>
+      <a href="contact.html"><FONT COLOR="white">CONTACT</FONT></a>
     </div>
+    <nav style="font-size: 15;">
+      <a href="#sectionB" style="font-size: 15px;">EDUCATION</a>
+      <a href="#sectionC" style="font-size: 15px;">EXPERIENCE</a>
+      <a href="#sectionD" style="font-size: 15px;">LICENSE</a>
+    </nav>
   </div>
   <div class="container">
+    
+    <div class="wrapper" style="margin: 1%;">
+      <div id="section" class="section bg-red" style="padding: 8%; justify-content: center; text-align: center;">
+        <div>
+          Morgan Burlin <br>
+          <p2>
+            B&oumllev&aumlgen 30, Ume&aring, Sweden <span>&#x2022</span> 070-665-51-54 <span>&#x2022</span> <a href="mailto:morgan.burlin@gmail.com?subject=Business inquirie" style="vertical-align:text-top; font-size: 20px; color: #000000; text-decoration: none;">
+            morgan.burlin@gmail.com </a>
+          </p2>
+        </div>
+      </div>
+      <div id="sectionB" class="section bg-blue" style="text-align: left;">
+        <div>
+          <p4>
+            EDUCATION
+          </p4>
+          <hr width="2000px"
+          align="center">
+          <div class="grid-container" style="  align-items: center;">
+            <div class="ume" style="text-align: left; ">
+                <p3>
+                  Ume&aring Universitet:
+                </p3>
+                <br>
+                <p2>
+                  Master of Science Programme in Interaction Technology and Design
+                </p2>
+            </div>
+        
+            <div class="umeyear" style="text-align: right; ">
+                <p2>
+                  2021 - 2026
+                </p2>
+            </div>
+            <div class="um" style="text-align: left; ">
+              <p3>
+                Baldergymnasiet:
+              </p3>
+              <br>
+              <p2>
+                Teknikprogrammet <span>&#8211</span> teknikspecialisering
+              </p2>
+          </div>
+      
+          <div class="umyear" style="text-align: right; ">
+              <p2>
+                2018 - 2021
+              </p2>
+          </div>
+          </div>
+        </div>
+      </div>
+    
+      <div id="sectionC" class="section bg-green">
+        <div>
+          <p4>
+            EXPERIENCE
+          </p4>
+          <hr width="2000px"
+          align="center">
+          <div class="grid-container" style="  align-items: center;">
+            <div class="ume" style="text-align: left; ">
+                <p3>
+                  Landscaping
+                </p3>
+                <br>
+                <p2>
+                  Landscaping and gardening for Svenska Kyrkan
+                  <br>
+                  <span>&#x2022;</span>
+                  Maneuver wheel loaders
+                  <br>
+                  <span>&#x2022;</span>
+                  Managing heavy equipment
+                  <br>
+                  <span>&#x2022;</span>
+                  In charge of areas of responsibility
+                  <br>
+                </p2>
+            </div>
+        
+            <div class="umeyear" style="text-align: right; ">
+                <p2>
+                  2020 - 2022
+                </p2>
+            </div>
+            <div class="ume" style="text-align: left; ">
+              <p3>
+                Event organizer
+              </p3>
+              <br>
+              <p2>
+                Freelancing children's discos and adult events with three close friends
+                <br>
+                <span>&#x2022;</span>
+                Multiple employees
+                <br>
+                <span>&#x2022;</span>
+                Professional equipment
+                <br>
+              </p2>
+          </div>
+      
+          <div class="umeyear" style="text-align: right; ">
+              <p2>
+                2019 - 2020
+              </p2>
+          </div>
+            <div class="um" style="text-align: left; ">
+              <p3>
+                Football-camp leader:
+              </p3>
+              <br>
+              <p2>
+                Worked as a coach for a kid´s summer football-school.
+              </p2>
+          </div>
+      
+          <div class="umyear" style="text-align: right; ">
+              <p2>
+                2017 - 2019
+              </p2>
+          </div>
+          </div>
+        </div>
+      </div>
+
+      <div id="sectionD" class="section bg-yellow">
+        <div>
+          <p4>
+            LICENSE
+          </p4>
+          <hr width="2000px"
+          align="center">
+          <div class="grid-container" style="  align-items: center;">
+            <div class="ume" style="text-align: left; ">
+                <p2>
+                  Full Drivers license - type B
+                </p2>
+            </div>
+            <div class="umeyear" style="text-align: right; ">
+                <p2>
+                  2020
+                </p2>
+            </div>
+            <div class="um" style="text-align: left; ">
+              <p2>
+                Full Drivers license - type AM
+              </p2>
+          </div>
+      
+          <div class="umyear" style="text-align: right; ">
+              <p2>
+                2017
+              </p2>
+          </div>
+          </div>
+        </div>
+      </div>
+    </div>
   </div>
 </body>
 </html>

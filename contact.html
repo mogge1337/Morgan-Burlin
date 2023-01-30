@@ -51,7 +51,7 @@ body {
   width: 100%;
   margin: 0 auto;
 }
-.card:hover {
+.card::cue{
   transform: rotateY(180deg);
   -webkit-transform: rotateY(180deg);
 }
@@ -87,10 +87,10 @@ body {
 .businesscard.back b {
   font-size: 20px;
 }
-.card:hover .businesscard.front {
+.card:active .businesscard.front {
   display: none;
 }
-.card:hover .businesscard.front {
+.card:active .businesscard.front {
   display: block;
 }
 .businesscard.back::after {
@@ -214,7 +214,7 @@ a:active {
   </div>
   <div class="scene">
     <div class="card">
-        <div class="businesscard back">
+        <div class="businesscard front">
             <div class="wrap">
                 <div class="number">
                   <p3>
@@ -247,7 +247,7 @@ a:active {
             </div>
         </div>
 
-        <div class="businesscard front">
+        <div class="businesscard back">
           
         </div>
     </div>
