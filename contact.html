@@ -9,21 +9,29 @@
 }
 @import url("https://fonts.googleapis.com/css?family=EB+Garamond");
 body {
-  background-position: 350px;
-  background-color: #0d15a6;
-  height: 100vh;
-  display: flex;
-  flex-flow: column wrap;
-  align-content: center;
+	height: 100%;
+	padding: 5px;
+  margin-top: 70px;
+	background: #0d15a6;
+}
+.header {
+  grid-area: header;
+  padding: 55px;
+  position: relative;
+  text-align: center;
+  font-size: 30px;
+  align-items: center;
   justify-content: center;
+  vertical-align: middle;
 }
 .backup1{
   position: absolute;
-  color: #0d15a6;
-  top: 5%;
-  left: 5%;
-  width: 150px;
+  color: #040fd9;
+  top: 0;
+  width: auto;
   height: 50px;
+  justify-content: center;
+  align-items: center;
   text-align: center;
   vertical-align: middle;
   font-size: 40px;
@@ -170,6 +178,23 @@ body {
   z-index: 10;
   position: relative;
 }
+p1{
+  text-align: center;
+    vertical-align: middle;
+    text-decoration:none;
+    justify-content: center;
+    align-items: center;
+    color: #F6DF44;
+}
+
+p5{
+  text-align: center;
+    vertical-align: middle;
+    text-decoration:none;
+    justify-content: center;
+    align-items: center;
+    color: #ffffff;
+}
 p2{
   font-size: 15px;
   text-align: left;
@@ -209,8 +234,16 @@ a:active {
 </style>
 </head>
 <body>
-  <div class="backup1">
-    <a href="index.html">HOME</a>
+  <div class ="header">
+    <div class="backup1"">
+      <a href="index.html">HOME</a>
+      <p1> | </p1>
+      <a href="resume.html"><FONT COLOR="white">RESUME</FONT></a>
+      <p5> | </p5>
+      <a href="gallery.html"><FONT COLOR="white">GALLERY</FONT></a>
+      <p5> | </p5>
+      <a href="aboutme.html"><FONT COLOR="white">ABOUT ME</FONT></a>
+    </div>
   </div>
   <div class="scene">
     <div class="card">
