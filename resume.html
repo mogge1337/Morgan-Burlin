@@ -146,6 +146,11 @@ p5{
     align-items: center;
     color: #ffffff;
 }
+pNav{
+  text-align: center;
+  color: #F6DF44;
+  font-size: 15px;
+}
 
 .grid-container {
     display: grid;
@@ -157,11 +162,31 @@ hr.new4 {
   border: 20px solid rgb(0, 0, 0);
 }
 
+@media all and (max-device-width:500px) {
+    nav{
+      position:fixed;
+      width:30%;
+      text-align: center;
+      justify-content: center;
+      padding: 15px;
+      top: 9%;
+      right: 0;
+      color: #F6DF44;
+      background-color: #0e18d7;
+      box-shadow: 0 2px 5px 1px rgba(0, 0, 0, 0.2);
+    }
+    pNav{
+    text-align: center;
+    color: #F6DF44;
+    font-size: 30px;
+    }
+}
+
 </style>
 </head>
 <body>
   <div class ="header">
-    <div class="backup1"">
+    <div class="backup1" id="section80">
       <a href="index.html">HOME</a>
       <p1> | </p1>
       <a href="gallery.html"><FONT COLOR="white">GALLERY</FONT></a>
@@ -170,20 +195,21 @@ hr.new4 {
       <p5> | </p5>
       <a href="contact.html"><FONT COLOR="white">CONTACT</FONT></a>
     </div>
-    <nav style="font-size: 15;">
-      <a href="#sectionB" style="font-size: 20px;">EDUCATION</a>
-      <a href="#sectionC" style="font-size: 20px;">EXPERIENCE</a>
-      <a href="#sectionD" style="font-size: 20px;">LICENSE</a>
+    <nav>
+      <a href="#section80"><pNav>PAGE TOP</pNav></a>
+      <a href="#sectionB"><pNav>EDUCATION</pNav></a>
+      <a href="#sectionC"><pNav>EXPERIENCE</pNav></a>
+      <a href="#sectionD"><pNav>LICENSE</pNav></a>
     </nav>
   </div>
   <div class="container">
     
     <div class="wrapper" style="margin: 1%;">
-      <div id="section" class="section bg-red" style="padding: 8%; justify-content: center; text-align: center;">
+      <div class="section bg-red" style="padding: 8%; justify-content: center; text-align: center;">
         <div>
           Morgan Burlin <br>
           <p2>
-            B&oumllev&aumlgen 30, Ume&aring, Sweden <span>&#x2022</span> 070-665-51-54 <span>&#x2022</span> <a href="mailto:morgan.burlin@gmail.com?subject=Business inquirie" style="vertical-align:text-top; font-size: 20px; color: #000000; text-decoration: none;">
+            B&oumllev&aumlgen 30, Ume&aring, Sweden <span>&#x2022</span> <a href="tel:+46-70-665-51-54" style="vertical-align:text-top; font-size: 20px; color: #000000; text-decoration: none;">+46 070-665 51 54</a> <span>&#x2022</span> <a href="mailto:morgan.burlin@gmail.com?subject=Business inquirie" style="vertical-align:text-top; font-size: 20px; color: #000000; text-decoration: none;">
             morgan.burlin@gmail.com </a>
           </p2>
         </div>

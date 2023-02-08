@@ -232,6 +232,17 @@ a:hover {
 a:active {
   color: #F6DF44;
 }
+@media all and (max-device-width:500px) {
+    .businesscard {
+    background: #fff;
+    max-width: 560px;
+    min-height: 300px;
+    margin-top: 50%;
+    width: 100%;
+    /*transform: rotate(-90deg);*/
+  }
+
+}
 </style>
 </head>
 <body>
@@ -251,12 +262,12 @@ a:active {
         <div class="businesscard front">
             <div class="wrap">
                 <div class="number">
-                  <p3>
-                    +46 070-665 51 54
-                  </p3>
+                    <p5>
+                    <a href="tel:+46-70-665-51-54" style="color: #000000">+46 070-665 51 54</a>
+                    </p5>
                     <br>
                     <p2>
-                    <a href="mailto:morgan.burlin@gmail.com?subject=Business inquirie" style="font-size: 15px; color: #0d15a6; text-decoration: underline;">
+                    <a href="mailto:morgan.burlin@gmail.com?subject=Business inquirie" style="color: #000000; text-decoration: underline;">
                       morgan.burlin@gmail.com
                     </a>
                     </p2>
@@ -271,7 +282,9 @@ a:active {
                 <div class="nameandfunction">
                     <b>M</b>organ <b>B</b>urlin
                     <br>
+                    <!--
                     <p4><p3>S</p3>tures   <p3>P</p3>appa</p4>
+                    -->
                 </div>
             </div>
             <div class="wrap">
