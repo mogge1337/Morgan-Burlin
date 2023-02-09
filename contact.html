@@ -39,7 +39,7 @@ body {
 
 .scene {
   position: relative;
-  padding: 10%;
+  padding: 1%;
   -webkit-perspective: 1000;
   perspective: 1000;
   width: 100%;
@@ -209,6 +209,10 @@ p4{
   font-size: 15px;
   text-align: left;
 }
+p6{
+    font-size: 30px;
+    text-align: left;
+  }
 img {
   vertical-align: bottom;
   object-fit:fill;
@@ -233,13 +237,34 @@ a:active {
   color: #F6DF44;
 }
 @media all and (max-device-width:500px) {
+    .card{
+      max-width: 1000px;
+      min-height: 600px;
+    }
     .businesscard {
     background: #fff;
-    max-width: 560px;
-    min-height: 300px;
+    max-width: 1000px;
+    min-height: 600px;
     margin-top: 50%;
     width: 100%;
-    /*transform: rotate(-90deg);*/
+    transform: rotate(-90deg);
+  }
+  p2{
+  font-size: 30px;
+  text-align: left;
+  text-transform: lowercase;
+  }
+  p3{
+    font-size: 40px;
+    text-align: left;
+  }
+  p4{
+    font-size: 30px;
+    text-align: left;
+  }
+  p6{
+    font-size: 50px;
+    text-align: left;
   }
 
 }
@@ -262,9 +287,9 @@ a:active {
         <div class="businesscard front">
             <div class="wrap">
                 <div class="number">
-                    <p5>
+                    <p3>
                     <a href="tel:+46-70-665-51-54" style="color: #000000">+46 070-665 51 54</a>
-                    </p5>
+                    </p3>
                     <br>
                     <p2>
                     <a href="mailto:morgan.burlin@gmail.com?subject=Business inquirie" style="color: #000000; text-decoration: underline;">
@@ -280,7 +305,7 @@ a:active {
             </div>
             <div class="wrap">
                 <div class="nameandfunction">
-                    <b>M</b>organ <b>B</b>urlin
+                    <p6><b><p6>M</p6></b>organ <b><p6>B</p6></b>urlin</p6>
                     <br>
                     <!--
                     <p4><p3>S</p3>tures   <p3>P</p3>appa</p4>
